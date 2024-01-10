@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oturum Aç</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main>
+        <div class=".div">
+            <form class="form" action="">
+                <h3>Sign in to your account</h3>
+                <input id="email" type="email" placeholder="Enter e-mail">
+                <input id="password" type="password" placeholder="Enter password">
+                <input id="submit" class="submit" type="submit" value="SIGN IN">
+            </form>
+            <p>No account? <a href="">Sign Up</a></p>
+            <form class="form2" action="">
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Form elementini seçme
+        const form = document.querySelector('.form');
+
+        // Form submit olduğunda çalışacak olan fonksiyon
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Formun default submit işlemini engelle
+
+            // Burada bir koşul belirleyerek gerekli uyarıyı verebilirsiniz
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // localStorage.setItem('email: ', email)
+            // localStorage.setItem('password', password)
+
+            if (email === '' || password === '') {
+                alert('Yanlış veya eksik tuşladınız. Lütfen tekrar deneyin.');
+            } else {
+                // Formu sunucuya göndermek için burada işlemler yapılabilir
+                // Örneğin: form.submit();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
